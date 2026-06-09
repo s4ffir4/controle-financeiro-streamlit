@@ -12,11 +12,11 @@ st.set_page_config(
 
 def conectar():
     return psycopg2.connect(
-        host=st.secrets["ep-withered-mode-aphvlwsr-pooler.c-7.us-east-1.aws.neon.tech"],
-        database=st.secrets["neondb"],
-        user=st.secrets["neondb_owner"],
-        password=st.secrets["npg_Lw6hfs0Elt"],
-        port=st.secrets["5432"],
+        host=st.secrets["DB_HOST"],
+        database=st.secrets["DB_NAME"],
+        user=st.secrets["DB_USER"],
+        password=st.secrets["DB_PASSWORD"],
+        port=st.secrets["DB_PORT"],
         sslmode="require"
     )
 
